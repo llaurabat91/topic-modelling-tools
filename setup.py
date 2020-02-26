@@ -37,8 +37,12 @@ else:
         include_gsl_dir = "/usr/local/include/"
         lib_gsl_dir = "/usr/local/lib/"
     elif os.path.exists(sys.exec_prefix+"/include/gsl"):
-        include_gsl_dir = sys.exec_prefix+"/include"
-        lib_gsl_dir = sys.exec_prefix+"/lib"        
+        include_gsl_dir = sys.exec_prefix+"/include/"
+        lib_gsl_dir = sys.exec_prefix+"/lib/"        
+        pass
+    elif os.path.exists("/usr/include/gsl"):
+        include_gsl_dir = "/usr/include/"
+        lib_gsl_dir = "/usr/lib/"        
         pass
     else:
         print("Please install gsl, with e.g. conda install gsl")
