@@ -273,7 +273,7 @@ class QueryGibbs():
         model x number of topics x number of samples)
         """
 
-        assert len(token_key) == tt.shape[0]
+        # assert len(token_key) == tt.shape[0]
 
         ldatokens = set(token_key.keys())
 
