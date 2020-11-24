@@ -285,10 +285,7 @@ class QueryGibbs():
         self.tt = tt
         self.V = tt.shape[0]
         self.K = tt.shape[1]
-        if len(tt.shape)==2:
-            self.samples = 1
-        else:
-            self.samples = tt.shape[2]
+        self.samples = tt.shape[2]
 
         doc_list = list(itertools.chain(*self.docs))
         self.tokens = np.array([token_key[t] for t in doc_list],
