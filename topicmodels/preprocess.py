@@ -71,7 +71,8 @@ must be passed to RawDocs")
             self.docs = list(map(lambda x: re.sub(u'[\u2019\']', '', x), self.docs))
 
         self.N = len(list(self.docs))        
-        self.tokens = list(map(wordpunct_tokenize, self.docs))
+        # self.tokens = list(map(wordpunct_tokenize, self.docs))
+        self.tokens = [[s for s in doc.split()] for doc in self.docs]
 
     def phrase_replace(self, replace_dict):
 
